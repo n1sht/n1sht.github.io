@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishant Tripathi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --fg: #f4f4f5;
+      --accent: #0ef;
+      --card-bg: #1b1e24;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(90deg, #0ef, #00d4ff);
+      color: #000;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #333;
+      padding: 0.3rem 0.6rem;
+      margin: 0.2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .container { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+  <header>
+    <h1>Nishant Tripathi</h1>
+    <p>Web Developer | Student at Dr. A.P.J. Abdul Kalam Technical University</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p>📍 A9-Yamuna Vihar Colony, Chinhat, Lucknow</p>
+      <p>📞 <a href="tel:+917678855040">7678855040</a></p>
+      <p>✉️ <a href="mailto:n9169n@gmail.com">n9169n@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/n1sht" target="_blank">LinkedIn Profile</a></p>
+    </div>
+
+    <div class="section">
+      <h2>Top Skills</h2>
+      <div class="skills">
+        <span>JavaScript</span>
+        <span>React.js</span>
+        <span>jQuery</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>IBM Cloud Essentials</li>
+        <li>Python for Data Science</li>
+        <li>Big Data Foundations - Level 1</li>
+        <li>Java Programming I</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p><strong>Dr. A.P.J. Abdul Kalam Technical University</strong><br>
+      Student (June 2022 – Present)<br>
+      Lucknow, Uttar Pradesh, India</p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>SRMCEM, Dr. A.P.J. Abdul Kalam Technical University</strong><br>
+      B.Tech (Aug 2022 – Aug 2026)</p>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      if (root.style.getPropertyValue('--bg') === '#f4f4f5') {
+        root.style.setProperty('--bg', '#0f1115');
+        root.style.setProperty('--fg', '#f4f4f5');
+        root.style.setProperty('--card-bg', '#1b1e24');
+      } else {
+        root.style.setProperty('--bg', '#f4f4f5');
+        root.style.setProperty('--fg', '#0f1115');
+        root.style.setProperty('--card-bg', '#ffffff');
+      }
+    }
+  </script>
+</body>
+</html>
